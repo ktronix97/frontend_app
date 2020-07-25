@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+
 import { DefaultComponent } from './public/home/default/default.component';
 import { NavbarComponent } from './public/master-page/navbar/navbar.component';
 import { SideMenuComponent } from './public/master-page/side-menu/side-menu.component';
@@ -25,8 +25,8 @@ import { HeroComponent } from './public/master-page/hero/hero.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule
+    AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
