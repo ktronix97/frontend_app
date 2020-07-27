@@ -1,6 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './public/home/default/default.component';
+
 
 const routes: Routes = [
   {
@@ -12,8 +13,15 @@ const routes: Routes = [
     pathMatch: 'full',
     redirectTo: '/home'
   },
-  /*esta opcion va siempre de ultima*/
   {
+    path:'security',
+    loadChildren: () => import('./modules/security/security.module').then(m => m.SecurityModule)
+  },
+  {
+    path:'parameters',
+    loadChildren: () => import('./modules/parameters/parameters.module').then(m => m.ParametersModule)
+  },
+  {/*esta opcion va siempre de ultima*/
     path: '**',
     redirectTo: '/home'
   }

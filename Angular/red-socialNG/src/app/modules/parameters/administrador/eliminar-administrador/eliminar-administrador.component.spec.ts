@@ -1,0 +1,25 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { EliminarAdministradorComponent } from './eliminar-administrador.component';
+
+describe('EliminarAdministradorComponent', () => {
+  let component: EliminarAdministradorComponent;
+  let fixture: ComponentFixture<EliminarAdministradorComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ EliminarAdministradorComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(EliminarAdministradorComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
