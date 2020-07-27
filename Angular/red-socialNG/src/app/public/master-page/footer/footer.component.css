@@ -1,25 +1,4 @@
-.footer-copyright {
-    color: white;
-    text-align: center;
-}
-
-.row {
-    display: table;
-    width: 100%;
-}
-
-.col-md-3 {
-    display: table-cell;
-    padding: 16px;
-    width: 100%;
-}
-
 .page-footer {
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     background-color: black;
     color: white;
     text-align: center;
