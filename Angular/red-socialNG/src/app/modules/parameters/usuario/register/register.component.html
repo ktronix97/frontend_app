@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="row main">
+
+        <div class="panel-heading">
+           <div class="panel-title text-center">
+                   <h1 class="title">BetWhere</h1>
+                   <h3 class="title">Formulario de Registro</h3>
+               </div>
+        </div> 
+        
+        <div class="main-login main-center">
+            <form [formGroup]="fgValidator" class="form-horizontal" method="post" action="#">
+                
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Tu Nombre</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="primerNombre" type="text" class="form-control" name="name" id="name"  placeholder="Primer Nombre*"/>
+                            <input formControlName="segundoNombre" type="text" class="form-control" name="name" id="name"  placeholder="Segundo Nombre"/>
+                            <input formControlName="primerApellido" type="text" class="form-control" name="name" id="name"  placeholder="Primer Apellido*"/>
+                            <input formControlName="segundoApellido" type="text" class="form-control" name="name" id="name"  placeholder="Segundo Apellido"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Tu E-mail</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="correo" type="text" class="form-control" name="email" id="email"  placeholder="asdf@asdf.com*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Tu Nombre de Usuario</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="nombreUsuario" type="text" class="form-control" name="username" id="username"  placeholder="Nombre de Usuario*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Tu Contraseña</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="contraseña" type="password" class="form-control" name="password" id="password"  placeholder="Contraseña*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Tu Ciudad</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="ciudad" type="text" class="form-control" name="city" id="city"  placeholder="Ciudad, Departamento*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Tu Celular</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="celular" type="text" class="form-control" name="phone" id="phone"  placeholder="1234567891*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Tu Fecha de Nacimiento</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="nacimiento" type="text" class="form-control" name="birth" id="birth"  placeholder="dd/mm/aaaa*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Tu genero</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="genero" type="text" class="form-control" name="gender" id="gender"  placeholder="Genero*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" (click)="userRegister()" class="login-button">Register</button>
+                </div>
+                <div class="login-register">
+                    <p>Have an account already? <a href="security/login" class="login-link">Login</a></p>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+
