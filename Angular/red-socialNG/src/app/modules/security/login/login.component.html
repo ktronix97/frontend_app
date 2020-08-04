@@ -27,7 +27,7 @@
                 <label for="password" class="cols-sm-2 control-label">Contraseña</label>
                 <div class="cols-sm-10">
                     <div class="input-group">
-                        <input formControlName="password" type="password" class="form-control" name="password" id="password" placeholder="password de Usuario*" />
+                        <input formControlName="password" type="password" class="form-control" id="password" placeholder="password de Usuario*" />
                         <div class="warning-validators" *ngIf="fvg.password.errors && (fvg.password.dirty || fvg.password.touched)">
                             <strong *ngIf="fvg.password.errors.required">La contraseña es requerida </strong>
                         </div>
@@ -35,6 +35,9 @@
                 </div>
             </div>
         </form>
+        <div>
+            <button type="button" class="btn btn-success">Login</button>
+        </div>
         <!-- Remind Passowrd -->
         <div id="formFooter">
             <a class="underlineHover" routerLink="/security/reset-password">Forgot Password?</a>
