@@ -1,13 +1,12 @@
 <div class="container">
+
+    <div class="title-center">
+        <h1 class="title">BetWhere</h1>
+        <h3 class="title">Formulario de Registro</h3>
+    </div>
+
     <div class="row main">
 
-        <div class="panel-heading">
-           <div class="panel-title text-center">
-                   <h1 class="title">BetWhere</h1>
-                   <h3 class="title">Formulario de Registro</h3>
-               </div>
-        </div> 
-        
         <div class="main-login main-center">
             <form [formGroup]="fgValidator" class="form-horizontal" method="post" action="#">
                 
@@ -16,8 +15,14 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <input formControlName="primerNombre" type="text" class="form-control" name="name" id="name"  placeholder="Primer Nombre*"/>
+                        </div>
+                        <div class="input-group">
                             <input formControlName="segundoNombre" type="text" class="form-control" name="name" id="name"  placeholder="Segundo Nombre"/>
+                        </div>
+                        <div class="input-group">
                             <input formControlName="primerApellido" type="text" class="form-control" name="name" id="name"  placeholder="Primer Apellido*"/>
+                        </div>
+                        <div class="input-group">
                             <input formControlName="segundoApellido" type="text" class="form-control" name="name" id="name"  placeholder="Segundo Apellido"/>
                         </div>
                     </div>
@@ -27,7 +32,7 @@
                     <label for="email" class="cols-sm-2 control-label">Tu E-mail</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <input formControlName="correo" type="text" class="form-control" name="email" id="email"  placeholder="asdf@asdf.com*"/>
+                            <input formControlName="correo" type="text" class="form-control" name="email" id="email"  placeholder="abc@mail.com*"/>
                         </div>
                     </div>
                 </div>
@@ -90,7 +95,7 @@
                     <button type="button" (click)="userRegister()" class="login-button">Register</button>
                 </div>
                 <div class="login-register">
-                    <p>Have an account already? <a href="security/login" class="login-link">Login</a></p>
+                    <p>¿Ya tienes una cuenta? <a href="security/login" class="login-link">Login</a></p>
                 </div>
             </form>
 

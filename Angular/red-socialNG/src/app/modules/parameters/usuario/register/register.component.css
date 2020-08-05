@@ -37,7 +37,7 @@ input::-webkit-input-placeholder {
     margin-top: 30px;
     margin: 0 auto;
     max-width: 330px;
-   padding: 40px 40px;
+    padding: 40px 40px;
 }
 
 .login-register{
@@ -69,4 +69,12 @@ input::-webkit-input-placeholder {
 
 .form-control{
    margin-bottom: 5px;
+}
+
+.title-center{
+   text-shadow: 3px 3px 4px #64646471;
+   margin-top: 30px;
+   margin: 0 auto;
+   max-width: 500px;
+   padding: 40px 40px;
 }
