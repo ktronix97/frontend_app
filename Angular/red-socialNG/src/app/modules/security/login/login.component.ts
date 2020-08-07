@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserModel } from '../../../models/User.model';
+import MD5 from 'crypto-js/md5';
+
+declare const ShowNotificationMessage:any ;
 
 @Component({
   selector: 'app-login',
@@ -28,12 +32,26 @@ export class LoginComponent implements OnInit {
 
   userLogin(){
     if(this.fgValidator.invalid){
-      alert('Invalid User...');
+      ShowNotificationMessage('invalid User');
     }else{
+      let model=this.getLoginData();
+      console.log(model);
       alert('Welcome');
     }
   }
-
+   /** 
+    * Build a model instance to send it 
+    * 
+    * 
+    *  */
+  getLoginData():UserModel{
+      let model=new UserModel();
+      model.correo=this.fvg.email.value;
+      model.contraseña=MD5(this.fvg.password.value).toString();
+      return model;     
+  }
+ 
+ 
   get fvg(){
     return this.fgValidator.controls;
   }

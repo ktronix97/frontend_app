@@ -35,8 +35,9 @@ import { EditarUsuarioComponent } from './usuario/editar-usuario/editar-usuario.
 import { EliminarUsuarioComponent } from './usuario/eliminar-usuario/eliminar-usuario.component';
 import { ListarUsuarioComponent } from './usuario/listar-usuario/listar-usuario.component';
 import { RegisterComponent } from './usuario/register/register.component';
-
+import {NgxPaginationModule} from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 @NgModule({
@@ -45,7 +46,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule,
     ParametersRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    NgxSpinnerModule
   ]
 })
 export class ParametersModule { }
