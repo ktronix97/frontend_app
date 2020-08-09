@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+/*¨import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { PublicacionModel } from '../../models/publicacion.model'
 import { Observable } from 'rxjs';
@@ -28,3 +28,4 @@ export class PublicacionService {
     })
   }
 }
+*/
