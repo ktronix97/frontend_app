@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PublicacionModel } from '../../../../models/publicacion.model';
 
+
+
 @Component({
   selector: 'app-listar-publicacion',
   templateUrl: './listar-publicacion.component.html',
@@ -8,13 +10,18 @@ import { PublicacionModel } from '../../../../models/publicacion.model';
 })
 export class ListarPublicacionComponent implements OnInit {
 
+
   recordList: PublicacionModel[]
+
 
   constructor() { }
 
   ngOnInit(): void {
-    //this.getRecordList();
+
   }
+
+    //this.getRecordList();
+  
 
   /*getRecordList(){
     this.service.getAllRecords().subscribe(
@@ -32,4 +39,6 @@ export class ListarPublicacionComponent implements OnInit {
   RemoveRecordConfirmation(){
 
   }
+
 }
+
