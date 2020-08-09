@@ -1,1 +1,87 @@
-<p>listar-publicacion works!</p>
+<h1>Publicaciones</h1>
+<br>
+<a class="btn btn-success" routerLink="/parameters/publicacion-creation" role="button">New Record</a>
+<br>
+<br>
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <td>
+                id_publicacion
+            </td>
+            <td>
+                text
+            </td>
+            <td>
+                comentario
+            </td>
+            <td>
+                like
+            </td>
+            <td>
+                dislike
+            </td>
+            <td>
+                etiquetado
+            </td>
+            <td>
+                compartido
+            </td>
+            <td>
+                id_imagen
+            </td>
+            <td>
+                fecha
+            </td>
+            <td>
+                id_muro
+            </td>
+            <td>
+                Edit
+            </td>
+            <td>
+                Remove
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of recordList">
+            <td>
+                {{r.id_publicacion}}
+            </td>
+            <td>
+                {{r.text}}
+            </td>
+            <td>
+                {{r.comentario}}
+            </td>
+            <td>
+                {{r.like}}
+            </td>
+            <td>
+                {{r.dislike}}
+            </td>
+            <td>
+                {{r.etiquetado}}
+            </td>
+            <td>
+                {{r.compartido}}
+            </td>
+            <td>
+                {{r.id_imagen}}
+            </td>
+            <td>
+                {{r.fecha}}
+            </td>
+            <td>
+                {{r.id_muro}}
+            </td>
+            <td>
+                <a class="btn btn-warning" routerLink="/parmeters/publicacion-edition/{{r.id_publicacion}}" role="button">Edit</a>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="RemoveRecordConfirmation('r.id_publicacion')">Remove</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

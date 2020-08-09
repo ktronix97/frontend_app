@@ -1,1 +1,99 @@
-<p>crear-usuario works!</p>
+<div class="container">
+
+    <div class="title-center">
+        <h1 class="title">Crear Usuario</h1>
+    </div>
+
+    <div class="row main">
+
+        <div class="main-login main-center">
+            <form [formGroup]="fgValidator" class="form-horizontal" method="post" action="#">
+                
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Nombre</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="primerNombre" type="text" class="form-control" name="name" id="name"  placeholder="Primer Nombre*"/>
+                        </div>
+                        <div class="input-group">
+                            <input formControlName="segundoNombre" type="text" class="form-control" name="name" id="name"  placeholder="Segundo Nombre"/>
+                        </div>
+                        <div class="input-group">
+                            <input formControlName="primerApellido" type="text" class="form-control" name="name" id="name"  placeholder="Primer Apellido*"/>
+                        </div>
+                        <div class="input-group">
+                            <input formControlName="segundoApellido" type="text" class="form-control" name="name" id="name"  placeholder="Segundo Apellido"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Correo</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="correo" type="text" class="form-control" name="email" id="email"  placeholder="abc@mail.com*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Nombre de Usuario</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="nombreUsuario" type="text" class="form-control" name="username" id="username"  placeholder="Nombre de Usuario*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="contraseña" type="password" class="form-control" name="password" id="password"  placeholder="Contraseña*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Ciudad</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="ciudad" type="text" class="form-control" name="city" id="city"  placeholder="Ciudad, Departamento*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Celular</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="celular" type="text" class="form-control" name="phone" id="phone"  placeholder="1234567891*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Fecha de Nacimiento</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="nacimiento" type="text" class="form-control" name="birth" id="birth"  placeholder="dd/mm/aaaa*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Genero</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="genero" type="text" class="form-control" name="gender" id="gender"  placeholder="Genero*"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" (click)="crear()" class="login-button">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
