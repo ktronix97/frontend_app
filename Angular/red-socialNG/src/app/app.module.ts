@@ -10,10 +10,7 @@ import { SideMenuComponent } from './public/master-page/side-menu/side-menu.comp
 import { FooterComponent } from './public/master-page/footer/footer.component';
 import { HeroComponent } from './public/master-page/hero/hero.component';
 import { AboutUsComponent } from './public/about-us/about-us.component';
-
-
-
-
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -27,8 +24,8 @@ import { AboutUsComponent } from './public/about-us/about-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-    
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-crear-publicacion',
@@ -7,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearPublicacionComponent implements OnInit {
 
-  constructor() { }
+  fgValidator: FormGroup; 
+
+  constructor(
+    private fb : FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.formBuilding();
+  }
+
+  formBuilding() {
+    this.fgValidator = this.fb.group({
+      texto: ['', [Validators.required, Validators.minLength(2)]]
+    });
+  }
+
+  crear(){
+    if(this.fgValidator.invalid){
+      alert('Invalid Form...');
+    }else{
+      alert('To Register');
+    }
   }
 
 }

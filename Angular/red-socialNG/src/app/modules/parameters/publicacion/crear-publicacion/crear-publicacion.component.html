@@ -1,1 +1,39 @@
-<p>crear-publicacion works!</p>
+<div class="container">
+
+    <div class="title-center">
+        <h1>Crear Publicacion</h1>
+    </div>
+
+    <div class="row main">
+
+        <div class="main-login main-center">
+            <form [formGroup]="fgValidator" class="form-horizontal" method="post" action="#">
+                
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Texto de la publicacion</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <textarea formControlName="texto" id="" cols="30" rows="10" placeholder="Texto de la publicacion*"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Imagen</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <button>Subir imagen</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" (click)="crear()" class="login-button">Crear</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+</div>
+

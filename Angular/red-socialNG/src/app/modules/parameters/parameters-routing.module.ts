@@ -112,7 +112,7 @@ const routes: Routes = [
     component:CrearMuroComponent
   },
   {
-    path:'muro-edition',
+    path:'muro-edition/:id_muro',
     component:EditarMuroComponent
   },
   {
@@ -128,7 +128,7 @@ const routes: Routes = [
     component:CrearPublicacionComponent
   },
   {
-    path:'publicacion-edition',
+    path:'publicacion-edition/:id_publicacion',
     component:EditarPublicacionComponent
   },
   {
@@ -160,7 +160,7 @@ const routes: Routes = [
     component:CrearUsuarioComponent
   },
   {
-    path:'usuario-edition',
+    path:'usuario-edition/:id',
     component:EditarUsuarioComponent
   },
   {

@@ -1,1 +1,39 @@
-<p>listar-muro works!</p>
+<h1>Muros</h1>
+<br>
+<a class="btn btn-success" routerLink="/parameters/muro-creation" role="button">New Record</a>
+<br>
+<br>
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <td>
+                id_muro
+            </td>
+            <td>
+                id_usuario
+            </td>
+            <td>
+                Edit
+            </td>
+            <td>
+                Remove
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of recordList">
+            <td>
+                {{r.id_muro}}
+            </td>
+            <td>
+                {{r.id_usuario}}
+            </td>
+            <td>
+                <a class="btn btn-warning" routerLink="/parmeters/muro-edition/{{r.id_muro}}" role="button">Edit</a>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="RemoveRecordConfirmation('r.id_muro')">Remove</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
