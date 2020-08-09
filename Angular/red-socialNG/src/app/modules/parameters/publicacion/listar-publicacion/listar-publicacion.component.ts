@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-listar-publicacion',
   templateUrl: './listar-publicacion.component.html',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarPublicacionComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+  
   }
+
 
 }
