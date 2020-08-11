@@ -3,85 +3,47 @@
 <a class="btn btn-success" routerLink="/parameters/publicacion-creation" role="button">New Record</a>
 <br>
 <br>
-<table class="table">
-    <thead class="table-dark">
-        <tr>
-            <td>
-                id_publicacion
-            </td>
-            <td>
-                text
-            </td>
-            <td>
-                comentario
-            </td>
-            <td>
-                like
-            </td>
-            <td>
-                dislike
-            </td>
-            <td>
-                etiquetado
-            </td>
-            <td>
-                compartido
-            </td>
-            <td>
-                id_imagen
-            </td>
-            <td>
-                fecha
-            </td>
-            <td>
-                id_muro
-            </td>
-            <td>
-                Edit
-            </td>
-            <td>
-                Remove
-            </td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let r of recordList">
-            <td>
-                {{r.id_publicacion}}
-            </td>
-            <td>
-                {{r.text}}
-            </td>
-            <td>
-                {{r.comentario}}
-            </td>
-            <td>
-                {{r.like}}
-            </td>
-            <td>
-                {{r.dislike}}
-            </td>
-            <td>
-                {{r.etiquetado}}
-            </td>
-            <td>
-                {{r.compartido}}
-            </td>
-            <td>
-                {{r.id_imagen}}
-            </td>
-            <td>
-                {{r.fecha}}
-            </td>
-            <td>
-                {{r.id_muro}}
-            </td>
-            <td>
-                <a class="btn btn-warning" routerLink="/parmeters/publicacion-edition/{{r.id_publicacion}}" role="button">Edit</a>
-            </td>
-            <td>
-                <button type="button" class="btn btn-danger" (click)="RemoveRecordConfirmation('r.id_publicacion')">Remove</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+
+<p>Esto es un ejemplo de como se supone que deberian quedar y se eliminará mas adelante:</p>
+<div class="card">
+    <img src="https://cdni.rbth.com/rbthmedia/images/2019.06/original/5cf66c4715e9f9444a77d062.jpg" style="width:100%">
+    <p class="title">06/06/1944</p>
+    <p>Airborne troops were dropped behind enemy lines in the early hours, while thousands of ships gathered off the Normandy coast for the main attack.
+        <br>
+        Though they were expecting an invasion, German military leaders believed the initial attacks were only a diversionary tactic.
+        Image copyright Getty Images
+        <br>
+        A deception plan in the weeks ahead of the attack had led them to expect the main invasion further along the coast.
+        <br>
+        The surprise element helped British troops establish a foothold on a beach codenamed Gold.
+        <br>
+        In addition, Canadian forces established themselves on another beach - Juno - and the British got on to Sword beach.
+        <br>
+        American soldiers also managed to land on the westernmost beach - Utah - without major casualties.
+        <br>
+        But at nearby Omaha beach, the US force suffered serious losses. The naval barrage and bombing raids on the German defences were ineffective and the Americans encountered a crack division of German troops.</p>
+    <a href="#"><img src="https://image.flaticon.com/icons/svg/633/633759.svg" style="width:5%;"></a>
+    <a href="#"><img src="https://image.flaticon.com/icons/svg/633/633758.svg" style="width:5%;"></a>
+    <a routerLink="/parameters/comentario">Comentarios</a>
+    <a href="#">Etiquetados</a>
+    <a class="btn btn-warning" routerLink="/parmeters/publicacion-edition/{{r.id_publicacion}}" role="button">Edit</a>
+    <button type="button" class="btn btn-danger" (click)="RemoveRecordConfirmation('r.id_publicacion')">Remove</button>
+  </div>
+
+<div class="card" *ngFor="let r of recordList">
+    <p>
+        {{r.id_imagen}}
+    </p>
+    <p class="title">
+        {{r.fecha}}
+    </p>
+    <p>
+        {{r.text}}
+    </p>
+    <a href="#"><img src="https://image.flaticon.com/icons/svg/633/633759.svg" style="width:5%;"></a>
+    <a href="#"><img src="https://image.flaticon.com/icons/svg/633/633758.svg" style="width:5%;"></a>
+    <a routerLink="/parameters/comentario">Comentarios</a>
+    <a href="#">Etiquetados</a>
+    <a class="btn btn-warning" routerLink="/parmeters/publicacion-edition/{{r.id_publicacion}}" role="button">Edit</a>
+    <button type="button" class="btn btn-danger" (click)="RemoveRecordConfirmation('r.id_publicacion')">Remove</button>
+</div>
