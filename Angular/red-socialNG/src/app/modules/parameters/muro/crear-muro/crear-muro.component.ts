@@ -33,4 +33,9 @@ export class CrearMuroComponent implements OnInit {
     }
   }
 
+  
+  get fgv() {
+    return this.fgValidator.controls;
+  }
+
 }

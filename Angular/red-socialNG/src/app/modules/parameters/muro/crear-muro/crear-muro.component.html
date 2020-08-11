@@ -8,12 +8,15 @@
 
         <div class="main-login main-center">
             <form [formGroup]="fgValidator" class="form-horizontal" method="post" action="#">
-                
+
                 <div class="form-group">
                     <label for="name" class="cols-sm-2 control-label">ID del muro</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <input formControlName="id_muro" type="text" class="form-control" placeholder="ID del muro*"/>
+                            <input formControlName="id_muro" type="text" class="form-control" placeholder="ID del muro*" />
+                            <strong *ngIf="fgv.id_muro.errors.required">
+                                This field is required.
+                            </strong>
                         </div>
                     </div>
                 </div>
@@ -22,7 +25,10 @@
                     <label for="name" class="cols-sm-2 control-label">ID del usuario</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <input formControlName="id_usuario" type="text" class="form-control" placeholder="ID del usuario*"/>
+                            <input formControlName="id_usuario" type="text" class="form-control" placeholder="ID del usuario*" />
+                            <strong *ngIf="fgv.id_usuario.errors.required">
+                                This field is required.
+                            </strong>
                         </div>
                     </div>
                 </div>
@@ -36,4 +42,3 @@
         </div>
     </div>
 </div>
-

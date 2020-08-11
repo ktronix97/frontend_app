@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MuroModel } from '../../../../models/muro.model';
+import { MuroModel } from '../../../../models/parameters/muro.model';
 
 @Component({
   selector: 'app-listar-muro',
