@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from "ngx-spinner";
 import { FormConfig } from 'src/app/config/forms-config';
-import { DenunciaModel } from 'src/app/models/denuncia.model';
+import { DenunciaModel } from 'src/app/models/parameters/denuncia.model';
 
 declare const ShowNotificationMessage: any;
 declare const ShowRemoveConfirmationModal: any;

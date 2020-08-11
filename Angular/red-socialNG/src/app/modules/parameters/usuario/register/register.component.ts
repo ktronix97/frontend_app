@@ -26,7 +26,7 @@ export class RegisterComponent implements OnInit {
       segundoApellido: ['', [Validators.minLength(2)]],
       correo: ['', [Validators.required, Validators.email]],
       nombreUsuario: ['', [Validators.required, Validators.minLength(2)]],
-      contraseña: ['', [Validators.required, Validators.minLength(7)]],
+      contrasena: ['', [Validators.required, Validators.minLength(7)]],
       ciudad: ['', [Validators.required, Validators.minLength(2)]],
       celular: ['', [Validators.required, Validators.minLength(10)]],
       nacimiento: ['', [Validators.required, Validators.minLength(2)]],
@@ -34,12 +34,16 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  userRegister(){
+  adminRegister(){
     if(this.fgValidator.invalid){
       alert('Invalid Form...');
     }else{
       alert('To Register');
     }
+  }
+
+  get fgv() {
+    return this.fgValidator.controls;
   }
 
 }

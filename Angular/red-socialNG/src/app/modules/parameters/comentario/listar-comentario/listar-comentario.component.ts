@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComentarioModel } from 'src/app/models/comentario.model';
+import { ComentarioModel } from 'src/app/models/parameters/comentario.model';
 import { FormConfig } from 'src/app/config/forms-config';
 import { NgxSpinnerService } from "ngx-spinner";
 

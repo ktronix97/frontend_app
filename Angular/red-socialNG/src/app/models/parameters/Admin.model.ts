@@ -9,7 +9,7 @@ export class AdminModel{
     correo:String;
     contraseña:String;
     celular:String;
-    rol:number;   
+    rol?:number;   
     isLogged:boolean=false;
     token?:String;
 }

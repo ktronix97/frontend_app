@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormConfig  } from 'src/app/config/forms-config';
-import { DenunciaModel } from 'src/app/models/denuncia.model';
+import { DenunciaModel } from 'src/app/models/parameters/denuncia.model';
 
 declare const ShowNotificationMessage: any;
 

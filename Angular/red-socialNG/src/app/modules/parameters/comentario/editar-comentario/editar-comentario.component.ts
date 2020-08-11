@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router , ActivatedRoute  } from '@angular/router';
 import { FormConfig } from 'src/app/config/forms-config';
-import { ComentarioModel } from 'src/app/models/comentario.model';
+import { ComentarioModel } from 'src/app/models/parameters/comentario.model';
 
 declare const ShowNotificationMessage: any;
 

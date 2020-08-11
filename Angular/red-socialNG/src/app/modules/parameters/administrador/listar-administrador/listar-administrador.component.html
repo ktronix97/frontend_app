@@ -1,1 +1,102 @@
 <p>listar-administrador works!</p>
+<p>listar-publicidad works!</p>
+<a class="btn btn-success" routerLink="/parameters/publicidad-creation" role="button">New Record</a>
+<br />
+<br />
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <td>
+                Primer Nombre
+            </td>
+            <td>
+                Segundo Nombre
+            </td>
+            <td>
+                Primer Apellido
+            </td>
+            <td>
+                Segundo Apellido
+            </td>
+            <td>
+                Cargo
+            </td>
+            <td>
+                Empresa
+            </td>
+            <td>
+                Correo
+            </td>
+            <td>
+                Contraseña
+            </td>
+            <td>
+                Celular
+            </td>
+            <td>
+                Edit
+            </td>
+            <td>
+                Remove
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of recordList | paginate: { itemsPerPage: itemsPageAmount, currentPage: page }">
+            <td>
+                {{r.Primer Nombre}}
+            </td>
+            <td>
+                {{r.Segundo Nombre}}
+            </td>
+            <td>
+                {{r.Primer Apellido}}
+            </td>
+            <td>
+                {{r.Segundo Apellido}}
+            </td>
+            <td>
+                {{r.Cargo}}
+            </td>
+            <td>
+                {{r.Empresa}}
+            </td>
+            <td>
+                {{r.Correo}}
+            </td>
+            <td>
+                {{r.Contraseña}}
+            </td>
+            <td>
+                {{r.Celular}}
+            </td>
+            <td>
+                <a class="btn btn-warning" routerLink="/parameters/publicidad-edition/{{r.id}}" role="button">Edit</a>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="RemoveRecordConfirmation(r.id)">Remove</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<pagination-controls (pageChange)="page = $event"></pagination-controls>
+<ngx-spinner></ngx-spinner>
+<div class="modal" id="removeConfirmationModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Remove Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure removing this record?
+            </div>
+            <div class="modal-footer">
+                <button (click)="RemoveRecord()" type="button" class="btn btn-success">Confirm</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
