@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormConfig } from 'src/app/config/forms-config';
-import { PublicidadModel } from 'src/app/models/publicidad.model';
+import { PublicidadModel } from 'src/app/models/parameters/publicidad.model';
 
 declare const ShowNotificationMessage: any;
 

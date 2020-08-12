@@ -42,6 +42,10 @@ export class EditarUsuarioComponent implements OnInit {
     }
   }
 
+  editar(){
+    
+  }
+
   get fgv() {
     return this.fgValidator.controls;
   }

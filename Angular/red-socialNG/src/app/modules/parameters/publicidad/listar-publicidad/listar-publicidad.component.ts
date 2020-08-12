@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PublicidadModel } from 'src/app/models/publicidad.model';
+import { PublicidadModel } from 'src/app/models/parameters/publicidad.model';
 import { FormConfig } from 'src/app/config/forms-config';
 import { NgxSpinnerService } from "ngx-spinner";
 

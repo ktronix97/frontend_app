@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { PublicacionModel } from '../../../../models/publicacion.model';
+import { PublicacionModel } from '../../../../models/parameters/publicacion.model';
+import { FormConfig } from 'src/app/config/forms-config';
+import { NgxSpinnerService } from "ngx-spinner";
 
+declare const ShowNotificationMessage: any;
+declare const ShowRemoveConfirmationModal: any;
+declare const closeModal: any;
 
 
 @Component({
@@ -10,35 +15,37 @@ import { PublicacionModel } from '../../../../models/publicacion.model';
 })
 export class ListarPublicacionComponent implements OnInit {
 
-
+  page: number = 1;
+  removeRecordId: String = '';
+  itemsPageAmount: number = FormConfig.ITEMS_PER_PAGE;
   recordList: PublicacionModel[]
 
-
-  constructor() { }
+  constructor( private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
-
+    this.spinner.show();
+    this.getRecordList();
   }
 
-    //this.getRecordList();
+     
+  getRecordList() {
   
+    setTimeout(() => {
+        /** spinner ends after 5 seconds */
+        this.spinner.hide();
+      }, 1000); 
+  
+}
 
-  /*getRecordList(){
-    this.service.getAllRecords().subscribe(
-      records => {
-        this.recordList = records;
-        console.log("Records:")
-        console.log(this.recordList)
-      },
-      error => {
-        console.log("Error with BackEnd")
-      }
-    )
-  }*/
+RemoveRecordConfirmation(id) {
+  this.removeRecordId = id;
+  ShowRemoveConfirmationModal();
+}
 
-  RemoveRecordConfirmation(){
+RemoveRecord(){
+  
+}
 
-  }
 
 }
 

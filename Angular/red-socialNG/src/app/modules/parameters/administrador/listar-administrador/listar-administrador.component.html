@@ -28,7 +28,7 @@
                 Correo
             </td>
             <td>
-                Contraseña
+                Contrasena
             </td>
             <td>
                 Celular
@@ -44,34 +44,34 @@
     <tbody>
         <tr *ngFor="let r of recordList | paginate: { itemsPerPage: itemsPageAmount, currentPage: page }">
             <td>
-                {{r.Primer Nombre}}
+                {{r.primerNombre}}
             </td>
             <td>
-                {{r.Segundo Nombre}}
+                {{r.segundoNombre}}
             </td>
             <td>
-                {{r.Primer Apellido}}
+                {{r.primerApellido}}
             </td>
             <td>
-                {{r.Segundo Apellido}}
+                {{r.segundoApellido}}
             </td>
             <td>
-                {{r.Cargo}}
+                {{r.cargo}}
             </td>
             <td>
-                {{r.Empresa}}
+                {{r.empresa}}
             </td>
             <td>
-                {{r.Correo}}
+                {{r.correo}}
             </td>
             <td>
-                {{r.Contraseña}}
+                {{r.contrasena}}
             </td>
             <td>
-                {{r.Celular}}
+                {{r.celular}}
             </td>
             <td>
-                <a class="btn btn-warning" routerLink="/parameters/publicidad-edition/{{r.id}}" role="button">Edit</a>
+                <a class="btn btn-warning" routerLink="/parameters/admin-edition/{{r.id}}" role="button">Edit</a>
             </td>
             <td>
                 <button type="button" class="btn btn-danger" (click)="RemoveRecordConfirmation(r.id)">Remove</button>

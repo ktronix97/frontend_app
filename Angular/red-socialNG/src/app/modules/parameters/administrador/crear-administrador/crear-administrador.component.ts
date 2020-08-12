@@ -32,7 +32,7 @@ export class CrearAdministradorComponent implements OnInit {
     });
   }
 
-  userRegister(){
+  adminRegister(){
     if(this.fgValidator.invalid){
       alert('Invalid Form...');
     }else{

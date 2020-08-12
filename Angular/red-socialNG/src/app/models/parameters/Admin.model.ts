@@ -7,7 +7,7 @@ export class AdminModel{
     cargo:String;
     empresa:String;
     correo:String;
-    contraseña:String;
+    contrasena:String;
     celular:String;
     rol?:number;   
     isLogged:boolean=false;
