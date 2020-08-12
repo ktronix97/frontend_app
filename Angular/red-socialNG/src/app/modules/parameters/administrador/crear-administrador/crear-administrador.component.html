@@ -15,18 +15,18 @@
                     <label for="name" class="cols-sm-2 control-label">Nombre</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <input formControlName="primerNombre" type="text" class="form-control" name="name" id="name" placeholder="Primer Nombre*" />
+                            <input formControlName="primerNombre" type="text" class="form-control" name="primerNombre" id="primerNombre" placeholder="Primer Nombre*" />
                             <div class="warning-validator" *ngIf="fgv.primerNombre.errors && (fgv.primerNombre.dirty || fgv.primerNombre.touched)">
                                 <strong *ngIf="fgv.primerNombre.errors.required">
                                         This field is required.
                                     </strong>
-                                <strong *ngIf="fgv.text.primerNombre.minlength">
+                                <strong *ngIf="fgv.primerNombre.minlength">
                                     This field must be at least {{minLengthCode}} characters long.
                                     </strong>
                             </div>
                         </div>
                         <div class="input-group">
-                            <input formControlName="segundoNombre" type="text" class="form-control" name="name" id="name" placeholder="Segundo Nombre" />
+                            <input formControlName="segundoNombre" type="text" class="form-control" name="segundoNombre" id="segundoNombre" placeholder="Segundo Nombre" />
                             <div class="warning-validator" *ngIf="fgv.segundoNombre.errors && (fgv.segundoNombre.dirty || fgv.segundoNombre.touched)">
                                 <strong *ngIf="fgv.segundoNombre.errors.required">
                                     This field is required.
@@ -37,7 +37,7 @@
                             </div>
                         </div>
                         <div class="input-group">
-                            <input formControlName="primerApellido" type="text" class="form-control" name="name" id="name" placeholder="Primer Apellido*" />
+                            <input formControlName="primerApellido" type="text" class="form-control" name="name" id="primerApellido" placeholder="Primer Apellido*" />
                             <div class="warning-validator" *ngIf="fgv.primerApellido.errors && (fgv.primerApellido.dirty || fgv.primerApellido.touched)">
                                 <strong *ngIf="fgv.primerApellido.errors.required">
                                     This field is required.
@@ -48,7 +48,7 @@
                             </div>
                         </div>
                         <div class="input-group">
-                            <input formControlName="segundoApellido" type="text" class="form-control" name="name" id="name" placeholder="Segundo Apellido" />
+                            <input formControlName="segundoApellido" type="text" class="form-control" name="name" id="segundoApellido" placeholder="Segundo Apellido" />
                             <div class="warning-validator" *ngIf="fgv.segundoApellido.errors && (fgv.segundoApellido.dirty || fgv.segundoApellido.touched)">
                                 <strong *ngIf="fgv.segundoApellido.errors.required">
                                     This field is required.
@@ -116,7 +116,7 @@
                     <label for="password" class="cols-sm-2 control-label">Contraseña</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <input formControlName="contraseña" type="password" class="form-control" name="password" id="password" placeholder="Contraseña*" />
+                            <input formControlName="contrasena" type="password" class="form-control" name="password" id="password" placeholder="Contraseña*" />
                             <div class="warning-validator" *ngIf="fgv.contrasena.errors && (fgv.contrasena.dirty || fgv.contrasena.touched)">
                                 <strong *ngIf="fgv.contrasena.errors.required">
                                     This field is required.
