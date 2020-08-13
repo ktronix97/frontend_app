@@ -1,0 +1,71 @@
+<p>editar-publicidad works!</p>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <form [formGroup]="fgValidator">
+            <input type="hidden" formControlName="id" />
+            <div class="form-group input-group">
+                <input formControlName="id_muro" name="id_muro" class="form-control" placeholder="Id Muro" type="text">
+                <div class="warning-validator" *ngIf="fgv.id_muro.errors && (fgv.id_muro.dirty || fgv.id_muro.touched)">
+                    <strong *ngIf="fgv.id_muro.errors.required">
+                        This field is required.
+                    </strong>
+                    <strong *ngIf="fgv.id_muro.errors.minlength">
+                        This field must be at least {{minLengthCode}} characters long.
+                    </strong>
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                <input formControlName="id_admin" name="id_admin" class="form-control" placeholder="Id Admin" type="text">
+                <div class="warning-validator" *ngIf="fgv.id_admin.errors && (fgv.id_admin.dirty || fgv.id_admin.touched)">
+                    <strong *ngIf="fgv.id_admin.errors.required">
+                        This field is required.
+                    </strong>
+                    <strong *ngIf="fgv.id_admin.errors.minlength">
+                        This field must be at least {{minLengthCode}} characters long.
+                    </strong>
+                </div>
+            </div>
+
+
+            <div class="form-group input-group">
+                <label for="exampleInputFile">Cargar Archivo</label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input.</small>
+                <input formControlName="contenido" name="contenido" class="form-control" placeholder="contenido" type="text">
+                <div class="warning-validator" *ngIf="fgv.contenido.errors && (fgv.contenido.dirty || fgv.contenido.touched)">
+                    <strong *ngIf="fgv.contenido.errors.required">
+                        This field is required.
+                    </strong>
+                    <strong *ngIf="fgv.contenido.errors.minlength">
+                        This field must be at least {{minLengthName}} characters long.
+                    </strong>
+                </div>
+            </div>
+
+
+            <div class="form-group input-group">
+                <input formControlName="fecha" name="fecha" class="form-control" type="date">
+                <div class="warning-validator" *ngIf="fgv.fecha.errors && (fgv.fecha.dirty || fgv.fecha.touched)">
+                    <strong *ngIf="fgv.fecha.errors.required">
+                        This field is required.
+                    </strong>
+                    <strong *ngIf="fgv.fecha.errors.minlength">
+                        This field must be at least {{minLengthName}} characters long.
+                    </strong>
+                </div>
+            </div>
+
+            <!-- form-group// -->
+            <div class="form-group">
+                <button type="button" (click)="saveNewRecord()" class="btn btn-primary"> Submit
+                </button> &nbsp;&nbsp;
+                <a class="btn btn-warning" routerLink="/parameters/publicidad" role="button">Cancel</a>
+            </div>
+            <!-- form-group// -->
+        </form>
+    </article>
+</div>
+<!-- card.// -->

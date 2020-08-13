@@ -14,11 +14,9 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <input formControlName="id_muro" type="text" class="form-control" placeholder="ID del muro*" />
-                            <div class="warning-validator" *ngIf="fgv.id_muro.errors && (fgv.id_muro.dirty || fgv.id_muro.touched)">
-                                <strong *ngIf="fgv.id_muro.errors.required">
+                            <strong *ngIf="fgv.id_muro.errors.required">
                                 This field is required.
-                               </strong>
-                            </div>
+                            </strong>
                         </div>
                     </div>
                 </div>
@@ -28,11 +26,9 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <input formControlName="id_usuario" type="text" class="form-control" placeholder="ID del usuario*" />
-                            <div class="warning-validator" *ngIf="fgv.id_usuario.errors && (fgv.id_usuario.dirty || fgv.id_usuario.touched)">
-                                <strong *ngIf="fgv.id_usuario.errors.required">
-                                    This field is required.
-                                </strong>
-                            </div>
+                            <strong *ngIf="fgv.id_usuario.errors.required">
+                                This field is required.
+                            </strong>
                         </div>
                     </div>
                 </div>

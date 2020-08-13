@@ -1,0 +1,105 @@
+<h1>Usuarios</h1>
+<br>
+<a class="btn btn-success" routerLink="/parameters/usuario-creation" role="button">New Record</a>
+<br>
+<br>
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <td>
+                id
+            </td>
+            <td>
+                primer nombre
+            </td>
+            <td>
+                segundo nombre
+            </td>
+            <td>
+                primer apellido
+            </td>
+            <td>
+                segundo apellido
+            </td>
+            <td>
+                correo
+            </td>
+            <td>
+                nombre de usuario
+            </td>
+            <td>
+                contraseña
+            </td>
+            <td>
+                ciudad
+            </td>
+            <td>
+                celular
+            </td>
+            <td>
+                nacimiento
+            </td>
+            <td>
+                genero
+            </td>
+            <td>
+                foto
+            </td>
+            <td>
+                Edit
+            </td>
+            <td>
+                Remove
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let r of listaUsuarios">
+            <td>
+                {{r.id_usuario}}
+            </td>
+            <td>
+                {{r.primer_nombre}}
+            </td>
+            <td>
+                {{r.segundo_nombre}}
+            </td>
+            <td>
+                {{r.primer_apellido}}
+            </td>
+            <td>
+                {{r.segundo_apellido}}
+            </td>
+            <td>
+                {{r.correo}}
+            </td>
+            <td>
+                {{r.nombre_usuario}}
+            </td>
+            <td>
+                {{r.contrasena}}
+            </td>
+            <td>
+                {{r.ciudad}}
+            </td>
+            <td>
+                {{r.celular}}
+            </td>
+            <td>
+                {{r.nacimiento}}
+            </td>
+            <td>
+                {{r.genero}}
+            </td>
+            <td>
+                {{r.foto}}
+            </td>
+            <td>
+                <a class="btn btn-warning" routerLink="/parmeters/usuario-edition/{{r.id}}" role="button">Edit</a>
+            </td>
+            <td>
+                <button type="button" class="btn btn-danger" (click)="RemoveRecordConfirmation('r.id')">Remove</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,80 @@
+h1.title {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+h3.title {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 17px;
+}
+
+label {
+    margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 17px;
+}
+
+.main-login {
+    background-color: rgb(219, 219, 219);
+    box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+.main-center {
+    margin-top: 30px;
+    margin: 0 auto;
+    max-width: 330px;
+    padding: 40px 40px;
+}
+
+.login-register {
+    font-size: 14px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-button {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.login-button:hover {
+    background-color: #3e8e41
+}
+
+.login-link {
+    text-decoration: none;
+}
+
+.form-control {
+    margin-bottom: 5px;
+}
+
+.title-center {
+    text-shadow: 3px 3px 4px #64646471;
+    margin-top: 30px;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 40px 40px;
+}

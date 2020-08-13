@@ -1,0 +1,188 @@
+<p>editar-usuario works!</p>
+<div class="container">
+
+    <div class="title-center">
+        <h1 class="title">Editar Usuario</h1>
+    </div>
+
+    <div class="row main">
+
+        <div class="main-login main-center">
+            <form [formGroup]="fgValidator" class="form-horizontal" method="post" action="#">
+                <input type="hidden" formControlName="id" />
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Nombre</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="primerNombre" type="text" class="form-control" name="name" id="name" placeholder="Primer Nombre*" />
+                            <div class="warning-validator" *ngIf="fgv.primerNombre.errors && (fgv.primerNombre.dirty || fgv.primerNombre.touched)">
+                                <strong *ngIf="fgv.primerNombre.errors.required">
+                                        This field is required.
+                                    </strong>
+                                <strong *ngIf="fgv.text.primerNombre.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                    </strong>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input formControlName="segundoNombre" type="text" class="form-control" name="name" id="name" placeholder="Segundo Nombre" />
+                            <div class="warning-validator" *ngIf="fgv.segundoNombre.errors && (fgv.segundoNombre.dirty || fgv.segundoNombre.touched)">
+                                <strong *ngIf="fgv.segundoNombre.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.segundoNombre.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input formControlName="primerApellido" type="text" class="form-control" name="name" id="name" placeholder="Primer Apellido*" />
+                            <div class="warning-validator" *ngIf="fgv.primerApellido.errors && (fgv.primerApellido.dirty || fgv.primerApellido.touched)">
+                                <strong *ngIf="fgv.primerApellido.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.primerApellido.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input formControlName="segundoApellido" type="text" class="form-control" name="name" id="name" placeholder="Segundo Apellido" />
+                            <div class="warning-validator" *ngIf="fgv.segundoApellido.errors && (fgv.segundoApellido.dirty || fgv.segundoApellido.touched)">
+                                <strong *ngIf="fgv.segundoApellido.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.segundoApellido.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Correo</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="correo" type="text" class="form-control" name="email" id="email" placeholder="abc@mail.com*" />
+                            <div class="warning-validator" *ngIf="fgv.correo.errors && (fgv.correo.dirty || fgv.correo.touched)">
+                                <strong *ngIf="fgv.correo.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.correo.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Nombre de Usuario</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="nombreUsuario" type="text" class="form-control" name="username" id="username" placeholder="Nombre de Usuario*" />
+                            <div class="warning-validator" *ngIf="fgv.nombreUsuario.errors && (fgv.nombreUsuario.dirty || fgv.nombreUsuario.touched)">
+                                <strong *ngIf="fgv.nombreUsuario.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.nombreUsuario.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="contraseña" type="password" class="form-control" name="password" id="password" placeholder="Contraseña*" />
+                            <div class="warning-validator" *ngIf="fgv.contrasena.errors && (fgv.contrasena.dirty || fgv.contrasena.touched)">
+                                <strong *ngIf="fgv.contrasena.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.contrasena.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Ciudad</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="ciudad" type="text" class="form-control" name="city" id="city" placeholder="Ciudad, Departamento*" />
+                            <div class="warning-validator" *ngIf="fgv.ciudad.errors && (fgv.ciudad.dirty || fgv.ciudad.touched)">
+                                <strong *ngIf="fgv.ciudad.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.ciudad.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Celular</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="celular" type="text" class="form-control" name="phone" id="phone" placeholder="1234567891*" />
+                            <div class="warning-validator" *ngIf="fgv.celular.errors && (fgv.celular.dirty || fgv.celular.touched)">
+                                <strong *ngIf="fgv.celular.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.celular.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Fecha de Nacimiento</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="nacimiento" type="text" class="form-control" name="birth" id="birth" placeholder="dd/mm/aaaa*" />
+                            <div class="warning-validator" *ngIf="fgv.nacimiento.errors && (fgv.nacimiento.dirty || fgv.nacimiento.touched)">
+                                <strong *ngIf="fgv.nacimiento.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.nacimiento.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm" class="cols-sm-2 control-label">Genero</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <input formControlName="genero" type="text" class="form-control" name="gender" id="gender" placeholder="Genero*" />
+                            <div class="warning-validator" *ngIf="fgv.genero.errors && (fgv.genero.dirty || fgv.genero.touched)">
+                                <strong *ngIf="fgv.genero.errors.required">
+                                    This field is required.
+                                </strong>
+                                <strong *ngIf="fgv.genero.errors.minlength">
+                                    This field must be at least {{minLengthCode}} characters long.
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" (click)="editar()" class="login-button">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

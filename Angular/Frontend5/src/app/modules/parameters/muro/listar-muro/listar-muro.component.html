@@ -1,0 +1,36 @@
+<div class="text-center">
+    <a href="parameters/publicacion-creation" type="btn btn-primary" class="btn btn-primary" (click)="actualizaPublicaciones()">Crea nueva publicacion</a>
+  </div>
+
+<div class="container">
+    <div *ngFor="let p of listaPublicaciones">
+        <!-- Card -->
+        <div class="card">
+            <div>Posteada por {{p.usuarioId}}</div>
+            <div>Fecha:{{p.fecha}}</div>
+            <div>Compartido:{{p.compartido}}</div>
+            <!-- Card image -->
+            <img class="card-img-top" src={{p.urlImagen}}
+                alt="Card image cap">
+            <!-- Card content -->
+            <div class="card-body">
+
+                <!-- Text -->
+                <p class="card-text">{{p.texto}}</p>
+                <!-- Button -->
+                
+
+                <div class="container">
+                    <a type="button right" class="btn btn-primary" href="/parameters/publicacion/{{p.id_publicacion}}">Ver mas</a>
+                </div>
+
+                
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="actualizaPublicaciones()">Mas publicaciones</button>

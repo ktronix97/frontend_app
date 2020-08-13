@@ -1,0 +1,124 @@
+
+<div id="mySidebar" class="sidebar">
+    <button class="openbtn" onclick="closeNav()">&#9776; </button>
+<button class="openbtn" onclick="openNav()">&#9776; </button>
+
+    <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
+    <!-- Bootstrap List Group -->
+    <ul class="list-group">
+        <!-- Separator with title -->
+        <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+            <small>MAIN MENU</small>
+        </li>
+        <!-- /END Separator -->
+        <!-- Menu with submenu -->
+        <a href="#submenu1" data-toggle="collapse" aria-expanded="false"
+            class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-dashboard fa-fw mr-3"></span>
+                <span class="menu-collapsed">Administrador</span>
+                <span class="submenu-icon ml-auto"></span>
+            </div>
+        </a>
+        <!-- Submenu content -->
+        <div id='submenu1' class="collapse sidebar-submenu">
+            <a href="/usuario" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Usuarios</span>
+            </a>
+            <a href="/denuncia" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Denuncias</span>
+            </a>
+            <a href="/publicidad" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Publicidad</span>
+            </a>
+        </div>
+
+        <!-- Menu with submenu -->
+        <a href="#submenu2" data-toggle="collapse" aria-expanded="false"
+            class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-user fa-fw mr-3"></span>
+                <span class="menu-collapsed">Usuario</span>
+                <span class="submenu-icon ml-auto"></span>
+            </div>
+        </a>
+        <!-- Submenu content -->
+        <div id='submenu2' class="collapse sidebar-submenu">
+            <a href="/usuario-edition" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Modificar Datos</span>
+            </a>
+            <a href="/change-password" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Cambiar Contraseña</span>
+            </a>
+            <a href="/muro" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Ver el muro</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Amigos</span>
+            </a>
+        </div>
+
+
+        <!-- Menu with submenu -->
+        <a href="#submenu3" data-toggle="collapse" aria-expanded="false"
+            class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-dashboard fa-fw mr-3"></span>
+                <span class="menu-collapsed">Publicaciones</span>
+                <span class="submenu-icon ml-auto"></span>
+            </div>
+        </a>
+        <!-- Submenu content -->
+        <div id='submenu3' class="collapse sidebar-submenu">
+            <a href="/muro" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Revisa</span>
+            </a>
+            <a href="/publicacion-creation" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Crea</span>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Elimina</span>
+            </a>
+            <a href="/denuncia-creation" class="list-group-item list-group-item-action bg-dark text-white">
+                <span class="menu-collapsed">Denuncia</span>
+            </a>
+        </div>
+
+
+
+
+        <!-- Separator with title -->
+        <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+            <small>Opciones</small>
+        </li>
+        <!-- /END Separator -->
+        <a href="#" class="bg-dark list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-calendar fa-fw mr-3"></span>
+                <span class="menu-collapsed">Mensajes</span>
+            </div>
+        </a>
+        <a href="#" class="bg-dark list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-envelope-o fa-fw mr-3"></span>
+                <span class="menu-collapsed">Publicaciones</span>
+            </div>
+        </a>
+        <!-- Separator without title -->
+        <li class="list-group-item sidebar-separator menu-collapsed"></li>
+        <!-- /END Separator -->
+        <a href="#" class="bg-dark list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-question fa-fw mr-3"></span>
+                <span class="menu-collapsed">Ayuda</span>
+            </div>
+        </a>
+        <button data-toggle="sidebar-colapse" (click)="cerrarSesion()"
+            class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
+            <div class="d-flex w-100 justify-content-start align-items-center">
+                <span id="collapse-icon" class="fa fa-2x mr-3"></span>
+                <span id="collapse-text" class="menu-collapsed">Salir</span>
+            </div>
+        </button>
+    </ul><!-- List Group END-->
+  </div>

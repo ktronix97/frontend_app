@@ -1,24 +1,23 @@
+<p>editar-muro works!</p>
 <div class="container">
 
     <div class="title-center">
-        <h1>Crear Muro</h1>
+        <h1>Editar Muro</h1>
     </div>
 
     <div class="row main">
 
         <div class="main-login main-center">
             <form [formGroup]="fgValidator" class="form-horizontal" method="post" action="#">
-
+                <input type="hidden" formControlName="id" />
                 <div class="form-group">
                     <label for="name" class="cols-sm-2 control-label">ID del muro</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <input formControlName="id_muro" type="text" class="form-control" placeholder="ID del muro*" />
-                            <div class="warning-validator" *ngIf="fgv.id_muro.errors && (fgv.id_muro.dirty || fgv.id_muro.touched)">
-                                <strong *ngIf="fgv.id_muro.errors.required">
+                            <strong *ngIf="fgv.id_muro.errors.required">
                                 This field is required.
-                               </strong>
-                            </div>
+                            </strong>
                         </div>
                     </div>
                 </div>
@@ -28,17 +27,15 @@
                     <div class="cols-sm-10">
                         <div class="input-group">
                             <input formControlName="id_usuario" type="text" class="form-control" placeholder="ID del usuario*" />
-                            <div class="warning-validator" *ngIf="fgv.id_usuario.errors && (fgv.id_usuario.dirty || fgv.id_usuario.touched)">
-                                <strong *ngIf="fgv.id_usuario.errors.required">
-                                    This field is required.
-                                </strong>
-                            </div>
+                            <strong *ngIf="fgv.id_usuario.errors.required">
+                                This field is required.
+                            </strong>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <button type="button" (click)="crear()" class="login-button">Crear</button>
+                    <button type="button" (click)="editar()" class="login-button">Crear</button>
                 </div>
             </form>
 
@@ -46,3 +43,4 @@
         </div>
     </div>
 </div>
+

@@ -1,0 +1,68 @@
+<p>crear-comentario works!</p>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<div class="card bg-light">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <form [formGroup]="fgValidator">
+            <div class="form-group input-group">
+                <input formControlName="text" name="text" class="form-control" placeholder="Texto" type="text">
+                <div class="warning-validator" *ngIf="fgv.text.errors && (fgv.text.dirty || fgv.text.touched)">
+                    <strong *ngIf="fgv.text.errors.required">
+                        This field is required.
+                    </strong>
+                    <strong *ngIf="fgv.text.errors.minlength">
+                        This field must be at least {{minLengthCode}} characters long.
+                    </strong>
+                    <strong *ngIf="fgv.text.errors.maxlength">
+                        This field must be at least 100 characters long.
+                    </strong>
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                <input formControlName="ruta" name="ruta" class="form-control" placeholder="URL" type="url" id="example-url-input">
+                <div class="warning-validator" *ngIf="fgv.ruta.errors && (fgv.ruta.dirty || fgv.ruta.touched)">
+                    <strong *ngIf="fgv.ruta.errors.required">
+                        This field is required.
+                    </strong>
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                <input formControlName="like" name="like" class="form-control" type="number" placeholder="Cantidad de likes" id="example-number-input">
+                <div class="warning-validator" *ngIf="fgv.like.errors && (fgv.like.dirty || fgv.like.touched)">
+                    <strong *ngIf="fgv.like.errors.required">
+                        This field is required.
+                    </strong>
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                <input formControlName="dislike" name="dislike" class="form-control" placeholder="Cantidad de dislikes" type="number">
+                <div class="warning-validator" *ngIf="fgv.dislike.errors && (fgv.dislike.dirty || fgv.dislike.touched)">
+                    <strong *ngIf="fgv.dislike.errors.required">
+                        This field is required.
+                    </strong>
+                </div>
+            </div>
+
+            <div class="form-group input-group">
+                <input formControlName="fecha" name="fecha" class="form-control" placeholder="Fecha" type="date">
+                <div class="warning-validator" *ngIf="fgv.fecha.errors && (fgv.fecha.dirty || fgv.fecha.touched)">
+                    <strong *ngIf="fgv.fecha.errors.required">
+                        This field is required.
+                    </strong>
+                </div>
+            </div>
+
+            <!-- form-group// -->
+            <div class="form-group">
+                <button type="button" (click)="saveNewRecord()" class="btn btn-primary"> Submit
+                </button> &nbsp;&nbsp;
+                <a class="btn btn-warning" routerLink="/parameters/comentario" role="button">Cancel</a>
+            </div>
+            <!-- form-group// -->
+        </form>
+    </article>
+</div>
+<!-- card.// -->

@@ -1,0 +1,102 @@
+<div class="wrapper fadeInDown">
+
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="https://as1.ftcdn.net/jpg/02/15/13/80/500_F_215138012_d7ht5WOEygeYhB4Nw9W0j1ChTMkDzFaS.jpg"
+                id="icon" alt="User Icon" />
+        </div>
+
+
+
+            <div >
+                <label for="email" class="cols-sm-2 control-label">Usuario</label>
+                <div class="cols-sm-10">
+                    <input type="text" [(ngModel)]="usuario" />
+                    <p>{{ usuario}}</p>
+                </div>
+            </div>
+
+            <div >
+                <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+                <div class="cols-sm-10">
+                    <input type="text" [(ngModel)]="password" />
+                    <p>{{password}}</p>
+                </div>
+            </div>
+
+
+        <div>
+            <input type="submit" (click)="userLogin()" class="fadeIn fourth" value="Log In">
+        </div>
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" routerLink="/security/reset-password">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Do not display this image at the moment
+<img border="0" src="pic_trulli.jpg" alt="Trulli">
+
+<div class="wrapper fadeInDown">
+    <input type="text" [(ngModel)] = "usuario"/>
+    <p>{{ usuario}}</p> 
+    <div id="formContent">
+
+
+<div class="fadeIn first">
+    <img src="https://as1.ftcdn.net/jpg/02/15/13/80/500_F_215138012_d7ht5WOEygeYhB4Nw9W0j1ChTMkDzFaS.jpg" id="icon"
+        alt="User Icon" />
+</div>
+
+<form [formGroup]="fgValidator" class="form-horizontal" method="post" action="#">
+
+    <div class="form-group">
+        <label for="email" class="cols-sm-2 control-label">Usuario</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+
+                <input formControlName="email" type="text" class="form-control" name="usuario" id="email"
+                    placeholder="asdf@asdf.com*" />
+                <div class="warning-validators" *ngIf="fvg.email.errors && (fvg.email.dirty || fvg.email.touched)">
+                    <strong *ngIf="fvg.email.errors.required">Este campo es requerido </strong>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+        <div class="cols-sm-10">
+            <div class="input-group">
+
+                <input [ngModel]="password" formControlName="password" type="password" class="form-control"
+                    id="password" placeholder="password de Usuario*" />
+                <div class="warning-validators"
+                    *ngIf="fvg.password.errors && (fvg.password.dirty || fvg.password.touched)">
+                    <strong *ngIf="fvg.password.errors.required">La contraseña es requerida </strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>
+<div>
+    <input type="submit" (click)="userLogin()" class="fadeIn fourth" value="Log In">
+</div>
+
+<div id="formFooter">
+    <a class="underlineHover" routerLink="/security/reset-password">Forgot Password?</a>
+</div>
+
+</div>
+</div>
+
+-->

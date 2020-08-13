@@ -1,0 +1,33 @@
+
+
+<body>
+    <!------------container------->
+    <div class="container">
+        <!-------Wrap------------>
+        <div id="wrap">
+
+            <!------------Form Start---------->
+
+            <div id='form'>
+                <div class="row">
+                    <div class="col-12 ">
+
+                        <form action="" method="POST" id="commentform">
+
+                            <div id="comment-name" class="form-row">
+                                <input type="text" placeholder="urlArchivo" name="dname" id="name" [(ngModel)]="urlImagen">
+                            </div>
+                            <div id="comment-message" class="form-row">
+                                <textarea name="comment" placeholder="Message" id="comment"  [(ngModel)]="texto"></textarea>
+                            </div>
+                            <button type="button" class="btn btn-success center" (click)="crearPublicacion() ">Success</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>

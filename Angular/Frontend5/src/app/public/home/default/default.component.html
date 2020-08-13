@@ -1,0 +1,24 @@
+<div *ngIf="rol=='Usuario';else other">
+    <app-listar-muro></app-listar-muro>    
+</div>
+
+<ng-template #other>
+    <div id="wrapper">
+        <app-hero></app-hero>
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+    
+            </div>
+            <!-- /.container-fluid -->
+    
+        </div>
+        <!-- /#page-wrapper -->
+    
+    </div>
+</ng-template>
+
+
+
+
+
